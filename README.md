@@ -20,7 +20,7 @@ Config :=
     Alg_Type => ID,
     Flags => Argon2Ada.Wipe_None);
 
-Result := Config.Hash(Pass, Salt);
+Result := Config.Hash (Pass, Salt);
 ```
 
 See argon2ada.ads for everything else.
