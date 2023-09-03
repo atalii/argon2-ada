@@ -8,12 +8,6 @@ use Ada.Command_Line;
 with Ada.Text_IO;
 use Ada.Text_IO;
 
-with Ada.Strings.Unbounded;
-use Ada.Strings.Unbounded;
-
-with System;
-with System.Storage_Elements;
-
 with Argon2Ada;
 
 procedure Test
@@ -44,7 +38,7 @@ is
 
    procedure Expect (A, B : String)
    is
-      E : Boolean := A /= B;
+      E : constant Boolean := A /= B;
    begin
       if E then
          Put_Line ("Expected: " & B);
@@ -79,7 +73,7 @@ is
 
       X : constant String := "07c9d62f370fb862ccd71310c0015934886a28bb606d6d5bbf4902d24ebf5ea1d1050ee6adcc2bea3344c44c0fbe1a532b98a44f73a4f3bbc7185782bb4d962355bff365e864fba0cafa02690612bc895d4a3fc02b6ac9b4a67e7fd584ae5e908ad91a2e720779f8181907686893f55cb84c69c2b0b8651e441272907c4c02ab";
       Password : Test_Hasher.Pass_Buf := Test_Hasher.Fill_Pass_Buf ("correct horse battery staple");
-      Salt : Test_Hasher.Salt_Buf := (others => 0);
+      Salt : Test_Hasher.Salt_Buf := [others => 0];
 
       Conf : constant Test_Hasher.Config :=
          (Time_Cost => 1, Mem_Cost => 64, Lanes => 8, Threads => 8,

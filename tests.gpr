@@ -9,7 +9,7 @@ project Tests is
    for Source_Dirs use ("./tests");
 
    package Compiler is
-      for Default_Switches ("Ada") use ("-g", "-O0", "-gnat2022");
+      for Default_Switches ("Ada") use ("-g", "-O0", "-gnat2022", "-Wall");
    end Compiler;
 
    package Linker is
