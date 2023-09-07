@@ -76,7 +76,7 @@ is
       Salt : Test_Hasher.Salt_Buf := [others => 0];
 
       Conf : constant Test_Hasher.Config :=
-         (Time_Cost => 1, Mem_Cost => 64, Lanes => 8, Threads => 8,
+         (Time_Cost => 1, Mem_Cost => 64, Lanes => 8,
 
          Version => Argon2Ada.Version_13,
          Alg => Argon2Ada.ID,

@@ -99,7 +99,7 @@ package body Argon2Ada is
                Secret => Secret'Address, Secret_Len => Secret_Len,
                AD => AD'Address, AD_Len => Associated_Data_Len,
                Time_Cost => C.Time_Cost, Mem_Cost => C.Mem_Cost,
-               Lanes => C.Lanes, Threads => C.Threads,
+               Lanes => C.Lanes, Threads => C.Lanes,
                Version => C.Version,
                Allocate_Cbk => System.Null_Address,
                Deallocate_Cbk => System.Null_Address,

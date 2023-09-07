@@ -113,7 +113,6 @@ package Argon2Ada is
          Time_Cost : Uint32;
          Mem_Cost : Uint32;
          Lanes : Uint32;
-         Threads : Uint32;
 
          Alg : Alg_Type;
          Version : Uint32;

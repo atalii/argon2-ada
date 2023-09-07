@@ -14,8 +14,7 @@ package Hash is new Argon2Ada.Hasher
 
 -- Parameters here are arbitrary; don't blindly copy them!
 Config :=
-    (Time_Cost => 1, Mem_Cost => 64,
-    Lanes => 4, Threads => 4,
+    (Time_Cost => 1, Mem_Cost => 64, Lanes => 4,
     Version => Argon2Ada.Version_13,
     Alg_Type => ID,
     Flags => Argon2Ada.Wipe_None);
